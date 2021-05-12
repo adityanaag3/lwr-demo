@@ -33,7 +33,7 @@
     "workbox-strategies": "6.1.5"
   },
   "devDependencies": {
-    "lwc-build-utils": "0.0.4",
+    "lwc-build-utils": "0.0.5",
     "@salesforce-ux/design-system": "2.15.6"
   }
 }

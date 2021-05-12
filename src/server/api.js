@@ -6,7 +6,7 @@ export default (expressApp) => {
     expressApp.use(express.json());
     // Add custom endpoints here
     expressApp.get('/getTodoItems', (req, res, next) => {
-        const client = new Client({
+        /*const client = new Client({
             connectionString: process.env.DATABASE_URL,
             ssl: { rejectUnauthorized: false }
         });
@@ -19,11 +19,12 @@ export default (expressApp) => {
                 res.json(data.rows);
                 client.end();
             }
-        );
+        );*/
+        res.json([{id:1, "task":"some task 1"}])
     });
 
     expressApp.post('/insertTodoItem', (req, res, next) => {
-        const client = new Client({
+        /*const client = new Client({
             connectionString: process.env.DATABASE_URL,
             ssl: { rejectUnauthorized: false }
         });
@@ -36,11 +37,11 @@ export default (expressApp) => {
                 res.json({"success": true});
                 client.end();
             }
-        );
+        );*/
     });
     
     expressApp.post('/deleteTodoItem', (req, res, next) => {
-        const client = new Client({
+        /*const client = new Client({
             connectionString: process.env.DATABASE_URL,
             ssl: { rejectUnauthorized: false }
         });
@@ -53,7 +54,7 @@ export default (expressApp) => {
                 res.json({"success": true});
                 client.end();
             }
-        );
+        );*/
     });
 
 };
