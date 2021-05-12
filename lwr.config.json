@@ -1,0 +1,23 @@
+{
+    "lwc": {
+        "modules": [
+            {
+                "dir": "$rootDir/src/modules"
+            },
+            {
+                "npm": "lightning-base-components"
+            }
+        ]
+    },
+    "routes": [
+        {
+            "id": "example",
+            "path": "/",
+            "rootComponent": "my/todoApp",
+            "layoutTemplate": "$layoutsDir/index.html",
+            "bootstrap": {
+                "syntheticShadow": true
+            }
+        }
+    ]
+}

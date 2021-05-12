@@ -1,0 +1,39 @@
+{
+  "name": "sparkling-hat-404513",
+  "version": "0.0.1",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "NODE_ENV=production lwc-build",
+    "build:dev": "lwc-build",
+    "clean": "rm -rf __lwr_cache__",
+    "launch": "node build/server.js",
+    "start": "NODE_ENV=production MODE=prod npm run launch",
+    "start:amd": "MODE=compat npm run launch",
+    "watch": "npm run build:dev && npm run launch"
+  },
+  "engines": {
+    "node": ">=14.15.4 <15"
+  },
+  "dependencies": {
+    "@lwrjs/label-module-provider": "0.1.3",
+    "@types/execa": "^2.0.0",
+    "lwc": "~1.9.0",
+    "lwr": "0.1.3",
+    "dotenv": "^8.2.0",
+    "pg": "8.6.0",
+    "lightning-base-components": "1.12.2-alpha",
+    "idb": "6.0.0",
+    "workbox-background-sync": "6.1.5",
+    "workbox-cacheable-response": "6.1.5",
+    "workbox-expiration": "6.1.5",
+    "workbox-precaching": "6.1.5",
+    "workbox-routing": "6.1.5",
+    "workbox-strategies": "6.1.5"
+  },
+  "devDependencies": {
+    "lwc-build-utils": "0.0.4",
+    "@salesforce-ux/design-system": "2.15.6"
+  }
+}

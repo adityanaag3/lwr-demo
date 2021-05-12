@@ -1,0 +1,20 @@
+.item{
+    background: #f8f7f7;
+}
+
+.todoInput{
+    width: 30%;
+    display: inline-block;
+}
+
+.todoCapture{
+    --sds-c-button-brand-color-background: #ffbc00;
+    --sds-c-button-brand-color-border: #ffbc00;
+    --sds-c-button-brand-text-color: black;
+}
+
+mark{
+    display: inline-block;
+    line-height: 0em;
+    padding-bottom: 0.5em;
+}

@@ -1,0 +1,26 @@
+<template>
+    <div class="slds-p-around_medium">
+        <div class="slds-text-heading_large"><mark>To-Do App</mark></div>
+        <div class="slds-text-heading_small slds-m-top_small">A functional to-do app that highlights the power of the Lightning Web Stack running on Heroku</div>
+        <div class="slds-m-top_medium todoCapture">
+            <lightning-input label="New Task" type="text" class="todoInput"></lightning-input>
+            <lightning-button variant="brand" label="Add" title="Primary action" class="slds-m-left_x-small" onclick={addTask}></lightning-button>
+        </div>
+        <div class="slds-m-top_medium">
+            <template if:true={todoItems}>
+                <template for:each={todoItems} for:item="todo">
+                    <div key={todo.id} class="slds-p-around_small slds-m-top_small item">
+                        <div class="slds-grid slds-grid_align-spread">
+                            <div class="slds-col">
+                                <span>{todo.task}</span>
+                            </div>
+                            <div class="slds-col">
+                                <lightning-button data-id={todo.id} onclick={removeTask} variant="base" label="" title="Remove Task" icon-name="utility:dash" class="slds-m-left_x-small"></lightning-button>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </template>
+        </div>
+    </div>
+</template>
