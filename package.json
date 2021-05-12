@@ -7,20 +7,21 @@
   "scripts": {
     "build": "NODE_ENV=production lwc-build",
     "build:dev": "lwc-build",
-    "clean": "rm -rf __lwr_cache__",
+    "build:static": "node scripts/generate.js",
+    "clean": "rm -rf __lwr_cache__ & rm -rf __generated_site_*",
     "launch": "node build/server.js",
-    "start": "NODE_ENV=production MODE=prod npm run launch",
-    "start:amd": "MODE=compat npm run launch",
+    "start": "NODE_ENV=production MODE=prod npm run build:static && npm run launch",
+    "start:amd": "MODE=compat npm run build:static && npm run launch",
     "watch": "npm run build:dev && npm run launch"
   },
   "engines": {
     "node": ">=14.15.4 <15"
   },
   "dependencies": {
-    "@lwrjs/label-module-provider": "0.1.3",
+    "@lwrjs/label-module-provider": "0.2.3",
     "@types/execa": "^2.0.0",
     "lwc": "~1.9.0",
-    "lwr": "0.1.3",
+    "lwr": "0.2.3",
     "dotenv": "^8.2.0",
     "pg": "8.6.0",
     "lightning-base-components": "1.12.2-alpha",
